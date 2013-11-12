@@ -1,0 +1,72 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: intro.aux
+The style file: ieeetr.bst
+Database file #1: citation.bib
+Warning--entry type for "obstacleavoidance" isn't style-file defined
+--line 16 of file citation.bib
+I was expecting a `,' or a `}'---line 46 of file citation.bib
+ : 
+ : @article{brief,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "blindsquare" isn't style-file defined
+--line 217 of file citation.bib
+"," immediately follows a field name---line 220 of file citation.bib
+ : Brain
+ :      , Marshall, and Tom Harris.  "How GPS Receivers Work" .  HowStuffWorks.com. <http://electronics.howstuffworks.com/gadgets/travel/gps.htm>  26 September 2013.
+I'm skipping whatever remains of this entry
+Warning--entry type for "gps" isn't style-file defined
+--line 222 of file citation.bib
+Warning--string name "july" is undefined
+--line 280 of file citation.bib
+Warning--empty publisher in gonzalez
+Warning--empty year in gonzalez
+Warning--empty chapter and pages in HOGDisp
+Warning--empty publisher in HOGDisp
+Warning--empty year in HOGDisp
+Warning--there's a number but no series in sakhardande2012smart
+Warning--empty year in nav1
+Warning--empty year in nav2
+Warning--empty year in slam
+You've used 32 entries,
+            1876 wiz_defined-function locations,
+            648 strings with 9014 characters,
+and the built_in function-call counts, 8238 in all, are:
+= -- 799
+> -- 270
+< -- 0
++ -- 104
+- -- 72
+* -- 549
+:= -- 1079
+add.period$ -- 28
+call.type$ -- 32
+change.case$ -- 30
+chr.to.int$ -- 0
+cite$ -- 41
+duplicate$ -- 433
+empty$ -- 882
+format.name$ -- 72
+if$ -- 2040
+int.to.chr$ -- 0
+int.to.str$ -- 32
+missing$ -- 27
+newline$ -- 100
+num.names$ -- 29
+pop$ -- 156
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 323
+stack$ -- 0
+substring$ -- 573
+swap$ -- 160
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 9
+while$ -- 79
+width$ -- 34
+write$ -- 284
+(There were 2 error messages)
