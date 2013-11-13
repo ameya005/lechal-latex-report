@@ -8,8 +8,10 @@
 \contentsline {subsection}{\numberline {1.3.4}Feedback and Communication}{9}
 \contentsline {section}{\numberline {1.4}Contribution}{9}
 \contentsline {chapter}{\numberline {2}Methodology}{11}
-\contentsline {section}{\numberline {2.1}Stereo Vision for obstacle avoidance}{11}
-\contentsline {subsection}{\numberline {2.1.1}Calibration}{12}
-\contentsline {subsection}{\numberline {2.1.2}Stereo Calibration}{15}
-\contentsline {subsection}{\numberline {2.1.3}Dense Stereo Correspondence}{16}
-\contentsline {subsection}{\numberline {2.1.4}Approximation of the height of the detected obstacle}{17}
+\contentsline {section}{\numberline {2.1}Bluetooth transfer of the images}{11}
+\contentsline {section}{\numberline {2.2}Stereo Vision for obstacle avoidance}{13}
+\contentsline {subsection}{\numberline {2.2.1}Calibration}{14}
+\contentsline {subsection}{\numberline {2.2.2}Stereo Calibration}{16}
+\contentsline {subsection}{\numberline {2.2.3}Dense Stereo Correspondence}{18}
+\contentsline {subsection}{\numberline {2.2.4}Approximation of the height of the detected obstacle}{19}
+\contentsline {chapter}{\numberline {3}Conclusions}{21}

@@ -182,6 +182,36 @@ Our contribution to the project was to develop the obstacle avoidance system. Th
 
 In the following sections, we will discuss the above problem statements in greater detail as well as the various methods we use to solve them.
 
+\section{Bluetooth transfer of the images}
+
+Our primary plan of action was to design an on-board system for the shoe. We decided to use the already existing platform of an android phone in order to reduce the burden of costs on the customer as well as make the system easier to integrate in the confines of a shoe. For this we decided to proceed with sending the images to the phone through bluetooth. For our prototype, we used an existing arduino based solution which uses a shield known as ARDUCAM to transfer the high speed data from the camera, byte by byte, to the phone. 
+
+The advantage of using bluetooth over other channels of communication is the low power requirement as well as the low cost of the modules themselves. We use the SPP profile of the bluetooth stack available in android phones by default. It emulates a normal serial port theough which we can send data byte by byte. 
+
+We have implemented  the above system using the ARDUCAM shield and the Arduino.
+
+Arduino is a single-board microcontroller to make using electronics in multidisciplinary projects more accessible. The hardware consists of an open-source hardware board designed around an 8-bit Atmel AVR microcontroller, or a 32-bit Atmel ARM. The software consists of a standard programming language compiler and a boot loader that executes on the microcontroller. 
+
+Official Arduinos have used the megaAVR series of chips, specifically the ATmega8, ATmega168, ATmega328, ATmega1280, and ATmega2560. A handful of other processors have been used by Arduino compatibles. Most boards include a 5 volt linear regulator and a 16 MHz crystal oscillator (or ceramic resonator in some variants), although some designs such as the LilyPad run at 8 MHz and dispense with the onboard voltage regulator due to specific form-factor restrictions. An Arduino's microcontroller is also pre-programmed with a boot loader that simplifies uploading of programs to the on-chip flash memory, compared with other devices that typically need an external programmer.
+
+At a conceptual level, when using the Arduino software stack, all boards are programmed over an RS-232 serial connection, but the way this is implemented varies by hardware version. Serial Arduino boards contain a level shifter circuit to convert between RS-232-level and TTL-level signals. Current Arduino boards are programmed via USB, implemented using USB-to-serial adapter chips such as the FTDI FT232. Some variants, such as the Arduino Mini and the unofficial Boarduino, use a detachable USB-to-serial adapter board or cable, Bluetooth or other methods. (When used with traditional microcontroller tools instead of the Arduino IDE, standard AVR ISP programming is used.)
+
+As the Arduino is a low power, low speed microcontroller, we need to use a separate interface in order to send the high speed camera data through the bluetooth serial channel. For this, we use the ARDUCAM shield. In simple terms, the ARDUCAM shield acts as a buffer between the camera and the Arduino, so as to store the data from the camera before sending it serially through bluetooth.
+
+ArduCAM is an open source project for CMOS camera modules, which hide the complexity of capturing high speed high resolution image data stream and provide the source code configuration for camera modules. User can freely control the ArduCAM shield to accomplish their different tasks.
+
+The use cases of ArduCAM include:
+
+\begin{itemize}
+\item Capture still images
+\item Real time preview on 3.2” LCD screen
+\item Wireless image transmission
+\end{itemize}
+
+We use the ArduCAM shield for wireless transmission of images through the use of an external bluetooth device. We use the HC-06 module for this. HC-06 is a fairly popular, low cost bluetooth slave module. It supports high speed bluetooth communication along with several bluetooth profiles like SPP, A2DP etc.
+
+ 
+
 \section{Stereo Vision for obstacle avoidance}
 
 In obstacle avoidance, a major problem is to gauge the height and position of the obstacle in three-dimensional space. There are various electronic, mechanical and computational methods to achieve this\cite{slam,infrared, thorpe1988vision}. Our major advantage in this case is that a person may use his other senses also to navigate using the cues from the shoe only as suggestions. Hence, our system though accurate does not need to be pinpoint accurate as robotic vehicle might need to be.
@@ -266,18 +296,17 @@ Here are two of the example input and undistorted images:
 
 
 \begin{figure}
-[hp]
 \centering
-\includegraphics[scale=0.5]{normal.jpg}
-\caption[Normal Image]{Image taken from a camera}
-\end{figure}
-
-
-\begin{figure}
-[hp]
-\centering
-\includegraphics[scale=0.5]{undist.jpg}
-\caption[Normal Image]{Undistorted Image}
+\parbox{5cm}{
+\includegraphics[width=5cm]{normal.jpg}
+\caption{Left Image}
+\label{fig:2figsA}}
+\qquad
+\begin{minipage}{5cm}
+\includegraphics[width=5cm]{undist.jpg}
+\caption{Disparity map}
+\label{fig:2figsB}
+\end{minipage}
 \end{figure}
 
 We will now take a look at the stereo calibration module of the project
@@ -413,7 +442,16 @@ If the value of $d$ is less than a minimum value, we return $i$ as the height of
 
 Thus we are able to use Stereoscopic vision to detect obstacles in the path of the user.
 
-In the next section, we discuss the implementation of this system on the android phone using bluetooth to transfer images from the shoe mounted cameras to the phone. 
+In the next section, we discuss the implementation of this system on the android phone using bluetooth to transfer images from the shoe mounted cameras to the phone.
+
+
+\chapter{Conclusions}
+
+In the preceding chapter, we have discussed the methodology of the entire system and the flow of the product. In this chapter, we will elaborate on the results of our tests on the prototype as well as the further work we plan to undertake. 
+
+
+
+    
 
 \bibliographystyle{ieeetr}
 \bibliography{citation}

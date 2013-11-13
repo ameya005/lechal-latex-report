@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  12 NOV 2013 12:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  12 NOV 2013 17:07
 entering extended mode
  %&-line parsing enabled.
 **intro.tex
@@ -145,7 +145,14 @@ Package caption Info: subfigure package is loaded.
 (/usr/share/texmf-texlive/tex/latex/caption/subcaption.sty
 Package: subcaption 2008/08/31 v1.0b Adding subcaptions (AR)
 LaTeX Info: Redefining \subref on input line 127.
-) (./intro.aux)
+) (./intro.aux
+
+LaTeX Warning: Label `fig:2figsA' multiply defined.
+
+
+LaTeX Warning: Label `fig:2figsB' multiply defined.
+
+)
 \openout1 = `intro.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -160,8 +167,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
-
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
 \scratchdimen=\dimen122
@@ -234,11 +240,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--168
 Chapter 2.
 [11
 
-]
+] [12]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+ [13]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [12]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -251,35 +260,43 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [13] <normal.jpg, id=62, 301.125pt x 225.84375pt>
+ [14] <normal.jpg, id=64, 301.125pt x 225.84375pt>
 File: normal.jpg Graphic file (type jpg)
- <use normal.jpg>
-<undist.jpg, id=63, 301.125pt x 224.33812pt>
+
+<use normal.jpg> <undist.jpg, id=65, 301.125pt x 224.33812pt>
 File: undist.jpg Graphic file (type jpg)
- <use undist.jpg> [14 <./normal.jpg> <./undist.jpg>]
-Overfull \hbox (3.4463pt too wide) in paragraph at lines 331--332
+ <use undist.jpg>
+[15] [16 <./normal.jpg> <./undist.jpg>]
+Overfull \hbox (3.4463pt too wide) in paragraph at lines 360--361
 []\OT1/cmr/m/n/10.95 The next part of our re-port will ex-plain the dense cor-r
 e-spon-dence method-
  []
 
-[15]
+[17]
 
-LaTeX Warning: Citation `rosten_2006_machine' on page 16 undefined on input lin
-e 340.
+LaTeX Warning: Citation `rosten_2006_machine' on page 18 undefined on input lin
+e 369.
 
-<left.jpg, id=71, 321.2pt x 240.9pt>
+<left.jpg, id=78, 321.2pt x 240.9pt>
 File: left.jpg Graphic file (type jpg)
  <use left.jpg>
-<disp.jpg, id=72, 642.4pt x 481.8pt>
+<disp.jpg, id=79, 642.4pt x 481.8pt>
 File: disp.jpg Graphic file (type jpg)
- <use disp.jpg> [16 <./left.jpg> <./disp.jpg>] [17] (./intro.bbl [18]
+ <use disp.jpg> [18 <./left.jpg> <./disp.jpg>] [19] [20]
+Chapter 3.
+(./intro.bbl [21
+
+]
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ∂ in font cmr10!
- [19
+ [22
 
-] [20] [21]) [22] (./intro.aux)
+] [23] [24]) [25] (./intro.aux)
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
@@ -301,9 +318,9 @@ cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb
 e/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmti10.pfb>
-Output written on intro.pdf (24 pages, 364495 bytes).
+Output written on intro.pdf (27 pages, 369752 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
+ 144 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
