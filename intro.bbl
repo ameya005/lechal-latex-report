@@ -117,6 +117,9 @@ L.~Matthies and A.~Elfes, ``Integration of sonar and stereo range data using a
 \bibitem{compdata}
 DucereTechnologies, ``Lechal ver 1.0.'' Internal product manuals.
 
+\bibitem{androiddevguide}
+{\em Android Developers Guide}.
+
 \bibitem{infrared}
 G.~Benet, F.~Blanes, J.~E. Sim{\'o}, and P.~P{\'e}rez, ``Using infrared sensors
   for distance measurement in mobile robots,'' {\em Robotics and autonomous
@@ -149,5 +152,13 @@ D.~Scharstein and R.~Szeliski, ``A taxonomy and evaluation of dense two-frame
 H.~Hirschmuller, ``Stereo processing by semiglobal matching and mutual
   information,'' {\em Pattern Analysis and Machine Intelligence, IEEE
   Transactions on}, vol.~30, no.~2, pp.~328--341, 2008.
+
+\bibitem{rosten_2006_machine}
+E.~Rosten and T.~Drummond, ``Machine learning for high-speed corner
+  detection,'' in {\em European Conference on Computer Vision}, vol.~1,
+  pp.~430--443, May 2006.
+
+\bibitem{playstore}
+
 
 \end{thebibliography}

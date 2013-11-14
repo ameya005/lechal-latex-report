@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  12 NOV 2013 17:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.23)  14 NOV 2013 12:36
 entering extended mode
  %&-line parsing enabled.
 **intro.tex
@@ -244,10 +244,20 @@ Chapter 2.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [13]
+ [13] [14]
+Overfull \hbox (1.80676pt too wide) in paragraph at lines 247--249
+\OT1/cmr/m/n/10.95 Provides sup-port for Blue-tooth head-sets to be used with m
+o-bile phones.
+ []
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
+[15]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+ [16]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -260,50 +270,47 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [14] <normal.jpg, id=64, 301.125pt x 225.84375pt>
+ [17] <normal.jpg, id=75, 301.125pt x 225.84375pt>
 File: normal.jpg Graphic file (type jpg)
-
-<use normal.jpg> <undist.jpg, id=65, 301.125pt x 224.33812pt>
+ <use normal.jpg>
+<undist.jpg, id=76, 301.125pt x 224.33812pt>
 File: undist.jpg Graphic file (type jpg)
- <use undist.jpg>
-[15] [16 <./normal.jpg> <./undist.jpg>]
-Overfull \hbox (3.4463pt too wide) in paragraph at lines 360--361
+ <use undist.jpg> [18 <./normal.jpg> <./undist.jpg>]
+Overfull \hbox (3.4463pt too wide) in paragraph at lines 418--419
 []\OT1/cmr/m/n/10.95 The next part of our re-port will ex-plain the dense cor-r
 e-spon-dence method-
  []
 
-[17]
-
-LaTeX Warning: Citation `rosten_2006_machine' on page 18 undefined on input lin
-e 369.
-
-<left.jpg, id=78, 321.2pt x 240.9pt>
+[19] <left.jpg, id=84, 321.2pt x 240.9pt>
 File: left.jpg Graphic file (type jpg)
  <use left.jpg>
-<disp.jpg, id=79, 642.4pt x 481.8pt>
+<disp.jpg, id=85, 642.4pt x 481.8pt>
 File: disp.jpg Graphic file (type jpg)
- <use disp.jpg> [18 <./left.jpg> <./disp.jpg>] [19] [20]
+ <use disp.jpg> [20 <./left.jpg> <./disp.jpg>] [21] [22]
+Overfull \hbox (12.48003pt too wide) in paragraph at lines 536--537
+[]\OT1/cmr/m/n/10.95 To solve the above prob-lems, we un-der-took a study of th
+e OpenCV4Android
+ []
+
+[23]
 Chapter 3.
-(./intro.bbl [21
+(./intro.bbl [24
 
 ]
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ∂ in font cmr10!
- [22
+ [25
 
-] [23] [24]) [25] (./intro.aux)
-
-LaTeX Warning: There were undefined references.
-
+] [26] [27]) [28] (./intro.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2734 strings out of 495061
- 38685 string characters out of 1182620
+ 2740 strings out of 495061
+ 38756 string characters out of 1182620
  106310 words of memory out of 3000000
- 5909 multiletter control sequences out of 15000+50000
+ 5915 multiletter control sequences out of 15000+50000
  11267 words of font info for 40 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  36i,7n,42p,1132b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -318,9 +325,9 @@ cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb
 e/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmti10.pfb>
-Output written on intro.pdf (27 pages, 369752 bytes).
+Output written on intro.pdf (30 pages, 380042 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
+ 153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

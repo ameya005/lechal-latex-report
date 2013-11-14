@@ -9,9 +9,15 @@
 \contentsline {section}{\numberline {1.4}Contribution}{9}
 \contentsline {chapter}{\numberline {2}Methodology}{11}
 \contentsline {section}{\numberline {2.1}Bluetooth transfer of the images}{11}
-\contentsline {section}{\numberline {2.2}Stereo Vision for obstacle avoidance}{13}
-\contentsline {subsection}{\numberline {2.2.1}Calibration}{14}
-\contentsline {subsection}{\numberline {2.2.2}Stereo Calibration}{16}
-\contentsline {subsection}{\numberline {2.2.3}Dense Stereo Correspondence}{18}
-\contentsline {subsection}{\numberline {2.2.4}Approximation of the height of the detected obstacle}{19}
-\contentsline {chapter}{\numberline {3}Conclusions}{21}
+\contentsline {section}{\numberline {2.2}Bluetooth}{13}
+\contentsline {subsection}{\numberline {2.2.1}Basics of Bluetooth}{14}
+\contentsline {subsection}{\numberline {2.2.2}Image Transfer}{15}
+\contentsline {section}{\numberline {2.3}Stereo Vision for obstacle avoidance}{15}
+\contentsline {subsection}{\numberline {2.3.1}Calibration}{16}
+\contentsline {subsection}{\numberline {2.3.2}Stereo Calibration}{19}
+\contentsline {subsection}{\numberline {2.3.3}Dense Stereo Correspondence}{20}
+\contentsline {subsection}{\numberline {2.3.4}Approximation of the height of the detected obstacle}{21}
+\contentsline {section}{\numberline {2.4}Implementation in OpenCV4Android}{22}
+\contentsline {subsection}{\numberline {2.4.1}Application Development with Async Initialization}{22}
+\contentsline {subsection}{\numberline {2.4.2}StereoVision in Android}{23}
+\contentsline {chapter}{\numberline {3}Conclusions}{24}

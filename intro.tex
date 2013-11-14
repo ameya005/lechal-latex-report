@@ -159,7 +159,7 @@ As discussed earlier in Section \ref{subsystems}, we have four major subsystems 
 
 The existing codebase for stereovision was overhauled and optimized. It was also ported to Android. Experiments were conducted to ensure viable processing speeds on the phone processor to ensure real-time, seamless detection of obstacles and changes in terrain. 
 
-The hardware for the prototype was researched for and finalized This included the camera modules and the communication system module. The two subsystems were then integrated into the existing prototype and are being tested with the Android based platform. Currently, experiments are being conducted to test the viability of bluetooth as a method for communication with regards to the constraints of time. 
+The hardware for the prototype was researched for and finalized. This included the camera modules and the communication system module. The two subsystems were then integrated into the existing prototype and are being tested with the Android based platform. Currently, experiments are being conducted to test the viability of bluetooth as a method for communication with regards to the constraints of time. 
 
 We also provided valuable inputs to the design team on technologies to create a user friendly design. 
 \newline
@@ -186,7 +186,7 @@ In the following sections, we will discuss the above problem statements in great
 
 Our primary plan of action was to design an on-board system for the shoe. We decided to use the already existing platform of an android phone in order to reduce the burden of costs on the customer as well as make the system easier to integrate in the confines of a shoe. For this we decided to proceed with sending the images to the phone through bluetooth. For our prototype, we used an existing arduino based solution which uses a shield known as ARDUCAM to transfer the high speed data from the camera, byte by byte, to the phone. 
 
-The advantage of using bluetooth over other channels of communication is the low power requirement as well as the low cost of the modules themselves. We use the SPP profile of the bluetooth stack available in android phones by default. It emulates a normal serial port theough which we can send data byte by byte. 
+The advantage of using bluetooth over other channels of communication is the low power requirement as well as the low cost of the modules themselves. We use the SPP profile of the bluetooth stack available in android phones by default. It emulates a normal serial port through which we can send data byte by byte. 
 
 We have implemented  the above system using the ARDUCAM shield and the Arduino.
 
@@ -210,8 +210,66 @@ The use cases of ArduCAM include:
 
 We use the ArduCAM shield for wireless transmission of images through the use of an external bluetooth device. We use the HC-06 module for this. HC-06 is a fairly popular, low cost bluetooth slave module. It supports high speed bluetooth communication along with several bluetooth profiles like SPP, A2DP etc.
 
- 
+We will now discuss the bluetooth based communication system that we have used in our product.
+\section{Bluetooth}
+The Android platform includes support for the Bluetooth network stack, which allows a device to wirelessly exchange data with other Bluetooth devices. The application framework provides access to the Bluetooth functionality through the Android Bluetooth APIs\cite{androiddevguide}. These APIs let applications wirelessly connect to other Bluetooth devices, enabling point-to-point and multipoint wireless features.
+Using the Bluetooth APIs, an Android application can perform the following:
 
+\begin{itemize}
+\item Scan for other Bluetooth devices
+\item Query the local Bluetooth adapter for paired Bluetooth devices
+\item Establish RFCOMM channels
+\item Connect to other devices through service discovery
+\item Transfer data to and from other devices
+\item Manage multiple connections
+\end{itemize}
+
+We will now discuss the Bluetooth API of the Android SDK.
+ 
+\subsection{Basics of Bluetooth} 
+
+This section describes how to use the Android Bluetooth APIs to accomplish the four major tasks necessary to communicate using Bluetooth: setting up Bluetooth, finding devices that are either paired or available in the local area, connecting devices, and transferring data between devices.
+All of the Bluetooth APIs are available in the android.bluetooth package. Here's a summary of the classes and interfaces you will need to create Bluetooth connections:
+\begin{enumerate}
+
+\item \textbf{BluetoothAdapter}\newline 
+Represents the local Bluetooth adapter (Bluetooth radio). The BluetoothAdapter is the entry-point for all Bluetooth interaction. Using this, you can discover other Bluetooth devices, query a list of bonded (paired) devices, instantiate a BluetoothDevice using a known MAC address, and create a BluetoothServerSocket to listen for communications from other devices.
+\item \textbf{BluetoothDevice}\newline 
+Represents a remote Bluetooth device. Use this to request a connection with a remote device through a BluetoothSocket or query information about the device such as its name, address, class, and bonding state.
+\item \textbf{BluetoothSocket}\newline 
+Represents the interface for a Bluetooth socket (similar to a TCP Socket). This is the connection point that allows an application to exchange data with another Bluetooth device via InputStream and OutputStream.
+\item \textbf{BluetoothServerSocket}\newline 
+Represents an open server socket that listens for incoming requests (similar to a TCP ServerSocket). In order to connect two Android devices, one device must open a server socket with this class. When a remote Bluetooth device makes a connection request to the this device, the BluetoothServerSocket will return a connected BluetoothSocket when the connection is accepted.
+\item \textbf{BluetoothClass}\newline 
+Describes the general characteristics and capabilities of a Bluetooth device. This is a read-only set of properties that define the device's major and minor device classes and its services. However, this does not reliably describe all Bluetooth profiles and services supported by the device, but is useful as a hint to the device type.
+\item \textbf{BluetoothProfile}\newline 
+An interface that represents a Bluetooth profile. A Bluetooth profile is a wireless interface specification for Bluetooth-based communication between devices. An example is the Hands-Free profile. 
+\item \textbf{BluetoothHeadset}\newline 
+Provides support for Bluetooth headsets to be used with mobile phones. This includes both Bluetooth Headset and Hands-Free (v1.5) profiles.
+
+\item \textbf{BluetoothA2dp}\newline 
+Defines how high quality audio can be streamed from one device to another over a Bluetooth connection. "A2DP" stands for Advanced Audio Distribution Profile.
+
+\item \textbf{BluetoothHealth}\newline 
+Represents a Health Device Profile proxy that controls the Bluetooth service.
+
+\item \textbf{BluetoothHealthCallback}\newline 
+An abstract class that you use to implement BluetoothHealth callbacks. You must extend this class and implement the callback methods to receive updates about changes in the application’s registration state and Bluetooth channel state.
+
+\item \textbf{BluetoothHealthAppConfiguration}\newline 
+Represents an application configuration that the Bluetooth Health third-party application registers to communicate with a remote Bluetooth health device.
+
+\item \textbf{BluetoothProfile.ServiceListener}\newline 
+An interface that notifies BluetoothProfile IPC clients when they have been connected to or disconnected from the service (that is, the internal service that runs a particular profile)
+
+\end{enumerate}
+
+The next section deals with the requirements and implementation of the bluetooth subsystem of our project.
+
+\label{imagetransfer}
+\subsection{Image Transfer}
+
+\label{stereoalgo}
 \section{Stereo Vision for obstacle avoidance}
 
 In obstacle avoidance, a major problem is to gauge the height and position of the obstacle in three-dimensional space. There are various electronic, mechanical and computational methods to achieve this\cite{slam,infrared, thorpe1988vision}. Our major advantage in this case is that a person may use his other senses also to navigate using the cues from the shoe only as suggestions. Hence, our system though accurate does not need to be pinpoint accurate as robotic vehicle might need to be.
@@ -360,6 +418,7 @@ The function estimates transformation between two cameras making a stereo pair. 
 The next part of our report will explain the dense correspondence methodology in order to get the final disparity maps for the depth information.
 
 \newpage
+\label{steroc}
 \subsection{Dense Stereo Correspondence}
 
 With the matrices calculated in the earlier sections, we can get accurate 3D estimation from images taken from the stereo setup. But the images also need to be aligned and , we need to know which pixels from the left image correspond to the pixels from the right in order to get a disparity map. 
@@ -391,7 +450,7 @@ In the disparity map, the closer objects are brighter in intensity while the far
 
 In order to optimise for speed, we have changed our approach a bit by only calculating the 20 best feature matches and only calculating SGBM based disparities for them. This gives us accurate enough results without being time consuming. 
 
-
+\label{height}
 \subsection{Approximation of the height of the detected obstacle}
 
 From the earlier section, we get feature descriptors and disparity values corresponding to the 20 best feature points. Using the fact that lower disparity values correspond to closer objects, we get the closest objects to the cameras. We then use the homography based method described in Rahman's thesis\cite{obstacleavoidance} to estimate the height of the detected objects. We describe the method in the following paragraphs.
@@ -444,6 +503,37 @@ Thus we are able to use Stereoscopic vision to detect obstacles in the path of t
 
 In the next section, we discuss the implementation of this system on the android phone using bluetooth to transfer images from the shoe mounted cameras to the phone.
 
+\section{Implementation in OpenCV4Android}
+
+In this section, we discuss our implementation of the methods discussed in section \ref{stereoalgo} using the OpenCV4Android SDK. 
+
+Starting with 2.4.2 release for Android, OpenCV Manager is used to provide apps with the best available version of OpenCV. This involves using async inititalization which refers to dynamically adding the libraries to the app during runtime using the OpenCV Manager which is now an app on the Google Playstore\cite{playstore}.
+
+\subsection{Application Development with Async Initialization}
+
+Using async initialization is a recommended way for application development. It uses the OpenCV Manager to access OpenCV libraries externally installed in the target system.
+
+In this case application works with OpenCV Manager in asynchronous fashion. OnManagerConnected callback will be called in UI thread, when initialization finishes. We have to note that it is not allowed to use OpenCV calls or load OpenCV-dependent native libs before invoking this callback. We can load your own native libraries that depend on OpenCV after the successful OpenCV initialization. Default BaseLoaderCallback implementations treat application context as Activity and call Activity.finish() method to exit in case of initialization failure.
+
+The primary advantage of using Async Initialization is that the application size becomes small as libraries are later asynchronously loaded. This also helps in the application taking advantage of the latest updates to the library without requiring updates from the developer's side.
+
+There are several disadvantages to this method too. AS all the functions requiring OpenCV are required to be implemented inside the BaseLoaderCallback, it is a bit tough to structure the code. Also, it requires the user to download a separate application to manage the OpenCV libraries itself.
+
+\subsection{StereoVision in Android}
+
+OpenCV4Android is the android port of the existing OpenCV library. Most functions of OpenCV have been implemented in this SDK using Java wrappers. 
+
+The program starts with the transfer of images from the external stereo camera setup that we have discussed in \ref{imagetransfer}. These images are then passed to a function which implements the algorithm discussed in \ref{steroc} and \ref{height}. The entire algorithm has been implemented using the in-built functions of OpenCV along with a few custom functions for the height approximation.We started out with a C++ implementation for prototyping. We later on translated it to Android after optimising it for the same.
+
+Two major challenges faced in the implementation of this system were:
+
+\begin{enumerate}
+\item The documentation of the OpenCV4Android was not adequate and thus, translating the code from the prototyped C++ code to the Androis code involved a lot of trial and error and implementation of bridging functions
+
+\item The event based life cycle of Android apps had to be taken into consideration for the transfer of images and the procedural code implemented in OpenCV.
+\end{enumerate}
+
+To solve the above problems, we undertook a study of the OpenCV4Android SDK source code. We built several small example apps to implement separate parts of the c++ code. In order to sped up the appliation for android phones, we reduced the no. of feature points we considered to less than or equal to 20 which we landed on after experimenting with a dataset of images. 
 
 \chapter{Conclusions}
 
