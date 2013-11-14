@@ -22,6 +22,7 @@ We provide a description of the research  and development process of \textbf{LeC
 \end{abstract}
 \tableofcontents
 \listoffigures
+\listoftables
 \chapter{Introduction}
 A recent study conducted by WHO\cite{who} revealed that there are more than 800 Million visually impaired people in the world. Out of these, 90\% live in  developing countries 
 where in there are not enough facilities for treatment and rehabilitation. In view of these horrifying statistics, LeChal\cite{lechal}, our flagship product proves to be a great boon to those who cannot see the world as we do.  
@@ -533,15 +534,56 @@ Two major challenges faced in the implementation of this system were:
 \item The event based life cycle of Android apps had to be taken into consideration for the transfer of images and the procedural code implemented in OpenCV.
 \end{enumerate}
 
-To solve the above problems, we undertook a study of the OpenCV4Android SDK source code. We built several small example apps to implement separate parts of the c++ code. In order to sped up the appliation for android phones, we reduced the no. of feature points we considered to less than or equal to 20 which we landed on after experimenting with a dataset of images. 
+To solve the above problems, we undertook a study of the OpenCV4Android SDK source code. We built several small example apps to implement separate parts of the c++ code. In order to speed up the application for android phones, we reduced the no. of feature points the program considers to less than or equal to 20 which we landed on after experimenting with a dataset of images. We also implemented several versions of the app with various different stereo algorithms before settling on to Semi Global Block Matching for disprity map calculation. We also decided to neglect depth calculations from the disparity as our navigation algorithm does not require depth as a primary input thus reducing computational complexity to a manageable level. Another optimization that has been implemented is that instead of creating the entire disparity map, we only look at a local area around the feature points themselves and only calculate the disparity at those positions. 
+
+We have thus implemented the entire computer vision system and integrated it with the existing Android ecosystem optimally.    
+
+In the next chapter, we discuss the results of our tests with the earlier and current prototype. 
 
 \chapter{Conclusions}
 
 In the preceding chapter, we have discussed the methodology of the entire system and the flow of the product. In this chapter, we will elaborate on the results of our tests on the prototype as well as the further work we plan to undertake. 
 
+The major parameter that we tested our system for as part of this project are as follows:
 
+\begin{enumerate}
+\item Speed 
+\item Accuracy 
+\item Usability 
+\end{enumerate}
 
-    
+The first two parameters can be quantitatively analyzed and the last one was charted using  a subjective analysis. 
+
+For testing the speed of the application, we mainly looked at two processes:
+\begin{itemize}
+\item Transfer of Images using Bluetooth
+\item Processing on the stereo image pair
+\end{itemize}
+
+A major doubt that was faced was if the bluetooth channel was fast enough and accurate enough for the transfer of images. The preferred option was bluetooth over other wireless solutions as bluetooth is present in every smart phone and is more power efficient where as the other wireless channels either required a large amount of power or external hardware extensions.
+
+In order to find the answer to this debate, we tested out a basic bluetooth application using the ArduCAM shields with Arduinos and bluetooth modules. We list our results in the table below for a baud rate of 115200 corresponding to a bit rate of 115.2kbps: 
+\newline
+\begin{table}[h]
+\begin{tabular}{|c|c|c|}
+\hline
+Resolution & Image data size & Time taken for Transfer\\
+\hline
+BMP 320 x 240 & 150KB & 13s\\
+\hline
+JPEG 320 x 240 &	 3-6KB &	0.3-0.5s\\
+\hline
+JPEG 640 x 480 &	 20-30KB &	1.7-2.6s\\
+\hline
+JPEG 1600 x 1200 & 	130KB  &  11s\\
+\hline
+
+\end{tabular} 
+\caption{Image Transfer Through Bluetooth}
+\end{table}
+\newline
+
+We decided to use the low resolution 320 x 240 JPEG images as suiting our purposes. With HC-06 modules and an ArduCAM shield along with a HTC Desire X android smartphone, we are able to achieve an average of 0.45 seconds for transferring two 320 x 240 JPEG images at a time.      
 
 \bibliographystyle{ieeetr}
 \bibliography{citation}
