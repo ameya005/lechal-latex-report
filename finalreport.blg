@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: finalreport.aux
+The style file: ieeetr.bst
+Database file #1: citation.bib
+Warning--entry type for "obstacleavoidance" isn't style-file defined
+--line 16 of file citation.bib
+I was expecting a `,' or a `}'---line 46 of file citation.bib
+ : 
+ : @article{brief,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "blindsquare" isn't style-file defined
+--line 234 of file citation.bib
+"," immediately follows a field name---line 237 of file citation.bib
+ : Brain
+ :      , Marshall, and Tom Harris.  "How GPS Receivers Work" .  HowStuffWorks.com. <http://electronics.howstuffworks.com/gadgets/travel/gps.htm>  26 September 2013.
+I'm skipping whatever remains of this entry
+Warning--entry type for "gps" isn't style-file defined
+--line 239 of file citation.bib
+Warning--string name "july" is undefined
+--line 297 of file citation.bib
+Warning--empty publisher in gonzalez
+Warning--empty year in gonzalez
+Warning--empty chapter and pages in HOGDisp
+Warning--empty publisher in HOGDisp
+Warning--empty year in HOGDisp
+Warning--there's a number but no series in sakhardande2012smart
+Warning--empty year in nav1
+Warning--empty year in nav2
+Warning--empty year in slam
+Warning--all relevant fields are empty in playstore
+You've used 35 entries,
+            1876 wiz_defined-function locations,
+            656 strings with 9217 characters,
+and the built_in function-call counts, 8743 in all, are:
+= -- 845
+> -- 280
+< -- 0
++ -- 109
+- -- 74
+* -- 576
+:= -- 1131
+add.period$ -- 31
+call.type$ -- 35
+change.case$ -- 31
+chr.to.int$ -- 0
+cite$ -- 45
+duplicate$ -- 463
+empty$ -- 948
+format.name$ -- 74
+if$ -- 2169
+int.to.chr$ -- 0
+int.to.str$ -- 35
+missing$ -- 28
+newline$ -- 109
+num.names$ -- 30
+pop$ -- 170
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 351
+stack$ -- 0
+substring$ -- 605
+swap$ -- 170
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 10
+while$ -- 83
+width$ -- 37
+write$ -- 303
+(There were 2 error messages)

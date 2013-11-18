@@ -1,0 +1,143 @@
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Related Work}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Overview}{8}{section.1.2}
+\contentsline {section}{\numberline {1.3}LeChal-Systems and Integration}{9}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}High Level Navigation}{9}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Low Level Navigation}{10}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Obstacle and Terrain Detection}{11}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Feedback and Communication}{11}{subsection.1.3.4}
+\contentsline {section}{\numberline {1.4}Contribution}{12}{section.1.4}
+\contentsline {chapter}{\numberline {2}Methodology}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}SONAR for obstacle detection}{13}{section.2.1}
+\select@language {english}
+\select@language {english}
+\contentsline {subsubsection}{Sonar Sensing}{14}{section*.5}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\contentsline {section}{\numberline {2.2}Bluetooth transfer of the images}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Bluetooth}{17}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Basics of Bluetooth}{17}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Image Transfer}{18}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Stereo Vision for obstacle avoidance}{18}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Calibration}{19}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Stereo Calibration}{21}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Dense Stereo Correspondence}{22}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Approximation of the height of the detected obstacle}{22}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Implementation in OpenCV4Android}{23}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Application Development with Async Initialization}{24}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}StereoVision in Android}{24}{subsection.2.5.2}
+\contentsline {chapter}{\numberline {3}Conclusions}{26}{chapter.3}
+\contentsline {section}{\numberline {3.1}Future Work}{28}{section.3.1}

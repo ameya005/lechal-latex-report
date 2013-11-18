@@ -1,0 +1,164 @@
+\begin{thebibliography}{10}
+
+\bibitem{brief}
+M.~Calonder, V.~Lepetit, M.~Ozuysal, T.~Trzcinski, C.~Strecha, and P.~Fua,
+  ``{{BRIEF}: Computing a Local Binary Descriptor Very Fast},'' {\em IEEE
+  Transactions on Pattern Analysis and Machine Intelligence}, vol.~34, no.~7,
+  pp.~1281--1298, 2012.
+
+\bibitem{obstacleavoidance}
+S.~Rahman, ``Obstacle detection for mobile robots using computer vision.''
+
+\bibitem{who}
+V.~Authors, ``Global data on visual impairments 2010,'' tech. rep., World Heath
+  Organization, 2010.
+
+\bibitem{lechal}
+A.~Sharma and K.~Lawrence, ``Lechal: A navigational shoe for the visually
+  impaired,'' 2013.
+
+\bibitem{gonzalez}
+R.~Gonzalez and R.~Woods, {\em Digital Image Processing, 3rd Edition}.
+
+\bibitem{HOGDisp}
+W.~Song, G.~Xiong, L.~Cao, and Y.~Jiang, {\em Depth Calculation and Object
+  Detection Using Stereo Vision with Subpixel Disparity and HOG Feature}.
+
+\bibitem{Opencvandroid}
+``Introduction to android development.''
+
+\bibitem{helal2001drishti}
+A.~Helal, S.~E. Moore, and B.~Ramachandran, ``Drishti: An integrated navigation
+  system for visually impaired and disabled,'' in {\em Wearable Computers,
+  2001. Proceedings. Fifth International Symposium on}, pp.~149--156, IEEE,
+  2001.
+
+\bibitem{ran2004drishti}
+L.~Ran, S.~Helal, and S.~Moore, ``Drishti: an integrated indoor/outdoor blind
+  navigation system and service,'' in {\em Pervasive Computing and
+  Communications, 2004. PerCom 2004. Proceedings of the Second IEEE Annual
+  Conference on}, pp.~23--30, IEEE, 2004.
+
+\bibitem{Zollner20118609458}
+M.~Zöllner, S.~Huber, H.-C. Jetter, and H.~Reiterer, ``Navi - a
+  proof-of-concept of a mobile navigational aid for visually impaired based on
+  the microsoft kinect,'' in {\em INTERACT 2011: Proceedings of 13th IFIP TC13
+  Conference on Human-Computer Interaction (Interactive Poster)}, pp.~584--587
+  (Part IV), acm In-Cooperation, SpringerLink, Sep 2011.
+
+\bibitem{sakhardande2012smart}
+J.~Sakhardande, P.~Pattanayak, and M.~Bhowmick, ``Smart cane assisted mobility
+  for the visually impaired,'' in {\em Proceedings of World Academy of Science,
+  Engineering and Technology}, no.~70, World Academy of Science, Engineering
+  and Technology, 2012.
+
+\bibitem{blindsquare}
+``Blindsquare, http://blindsquare.com/about/.''
+
+\bibitem{nav1}
+S.~Singh and P.~Keller, ``Obstacle detection for high speed autonomous
+  navigation,'' in {\em IEEE Proceedings of International Conference on
+  Robotics and Automation}.
+
+\bibitem{nav2}
+G.~Gini and A.~Marchi, ``"indoor robot navigation with single camera vision,''
+  in {\em Proc. Pattern Recognition in Information Systems}.
+
+\bibitem{slam}
+J.~Leonard, ``Simultaneous map building and localization for an autonomous
+  mobile robot,'' in {\em Intelligent Robots and Systems '91. 'Intelligence for
+  Mechanical Systems, Proceedings IROS '91. IEEE}.
+
+\bibitem{stereo1}
+M.~Agrawal and K.~Konolige, ``Real-time localization in outdoor environments
+  using stereo vision and inexpensive gps,'' in {\em Pattern Recognition, 2006.
+  ICPR 2006. 18th International Conference on}, vol.~3, pp.~1063--1068, IEEE,
+  2006.
+
+\bibitem{outdoorstereo}
+D.~Kim, J.~Sun, S.~M. Oh, J.~M. Rehg, and A.~F. Bobick, ``Traversability
+  classification using unsupervised on-line visual learning for outdoor robot
+  navigation,'' in {\em Robotics and Automation, 2006. ICRA 2006. Proceedings
+  2006 IEEE International Conference on}, pp.~518--525, IEEE, 2006.
+
+\bibitem{murray1997stereo}
+D.~Murray and C.~Jennings, ``Stereo vision based mapping and navigation for
+  mobile robots,'' in {\em Robotics and Automation, 1997. Proceedings., 1997
+  IEEE International Conference on}, vol.~2, pp.~1694--1699, IEEE, 1997.
+
+\bibitem{murray2000using}
+D.~Murray and J.~J. Little, ``Using real-time stereo vision for mobile robot
+  navigation,'' {\em Autonomous Robots}, vol.~8, no.~2, pp.~161--171, 2000.
+
+\bibitem{labayrade2002}
+R.~Labayrade, D.~Aubert, and J.-P. Tarel, ``Real time obstacle detection in
+  stereovision on non flat road geometry through,'' in {\em Intelligent Vehicle
+  Symposium, 2002. IEEE}, vol.~2, pp.~646--651, IEEE, 2002.
+
+\bibitem{sonar}
+A.~Elfes, ``Sonar-based real-world mapping and navigation,'' {\em Robotics and
+  Automation, IEEE Journal of}, vol.~3, no.~3, pp.~249--265, 1987.
+
+\bibitem{gps}
+M.~Brain and T.~Harris, ``How gps recievers work. ,howstuffworks.com,
+  http://electronics.howstuffworks.com/gadgets/travel/gps.htm.''
+
+\bibitem{hartley2000multiple}
+R.~Hartley and A.~Zisserman, {\em Multiple view geometry in computer vision},
+  vol.~2.
+\newblock Cambridge Univ Press, 2000.
+
+\bibitem{sonarstereo}
+L.~Matthies and A.~Elfes, ``Integration of sonar and stereo range data using a
+  grid-based representation,'' in {\em Robotics and Automation, 1988.
+  Proceedings., 1988 IEEE International Conference on}, pp.~727--733, IEEE,
+  1988.
+
+\bibitem{compdata}
+DucereTechnologies, ``Lechal ver 1.0.'' Internal product manuals.
+
+\bibitem{androiddevguide}
+{\em Android Developers Guide}.
+
+\bibitem{infrared}
+G.~Benet, F.~Blanes, J.~E. Sim{\'o}, and P.~P{\'e}rez, ``Using infrared sensors
+  for distance measurement in mobile robots,'' {\em Robotics and autonomous
+  systems}, vol.~40, no.~4, pp.~255--266, 2002.
+
+\bibitem{thorpe1988vision}
+C.~Thorpe, M.~H. Hebert, T.~Kanade, and S.~A. Shafer, ``Vision and navigation
+  for the carnegie-mellon navlab,'' {\em Pattern Analysis and Machine
+  Intelligence, IEEE Transactions on}, vol.~10, no.~3, pp.~362--373, 1988.
+
+\bibitem{marr1991computational}
+D.~Marr, T.~Poggio, E.~C. Hildreth, and W.~E.~L. Grimson, ``A computational
+  theory of human stereo vision,'' in {\em From the Retina to the Neocortex},
+  pp.~263--295, Springer, 1991.
+
+\bibitem{grimson1981computer}
+W.~E.~L. Grimson, ``A computer implementation of a theory of human stereo
+  vision,'' {\em Philosophical Transactions of the Royal Society of London.
+  Series B, Biological Sciences}, pp.~217--253, 1981.
+
+\bibitem{taxonomy}
+D.~Scharstein and R.~Szeliski, ``A taxonomy and evaluation of dense two-frame
+  stereo correspondence algorithms,'' {\em International journal of computer
+  vision}, vol.~47, no.~1-3, pp.~7--42, 2002.
+
+\bibitem{opencvdoc}
+``Opencv documentation.''
+
+\bibitem{hirschmuller2008stereo}
+H.~Hirschmuller, ``Stereo processing by semiglobal matching and mutual
+  information,'' {\em Pattern Analysis and Machine Intelligence, IEEE
+  Transactions on}, vol.~30, no.~2, pp.~328--341, 2008.
+
+\bibitem{rosten_2006_machine}
+E.~Rosten and T.~Drummond, ``Machine learning for high-speed corner
+  detection,'' in {\em European Conference on Computer Vision}, vol.~1,
+  pp.~430--443, May 2006.
+
+\bibitem{playstore}
+
+
+\end{thebibliography}

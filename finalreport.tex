@@ -9,29 +9,444 @@
 \usepackage{hhline}
 \usepackage{hyperref}
 
-\hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=A, pdfauthor=user, pdfsubject=, pdfkeywords=}
+\hypersetup{pdftex, colorlinks=true, linkcolor=black, citecolor=red, filecolor=blue, urlcolor=blue, pdftitle=A, pdfauthor=user, pdfsubject=, pdfkeywords=}
 
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{subfigure}
 \usepackage{caption}
 \usepackage{subcaption}
-%opening
-\title{Assistive Technologies for the Visually Impaired}
-\author{Ameya A. Joshi\\Department of Electrical and Electronics\\ BITS Pilani KK Birla Goa Campus\\f2010005@goa.bits-pilani.ac.in
-\and
- G.A. Pavan Kumar\\
- Department of Electronics and Communications\\
- BITS Pilani Hyderabad Campus\\
- f2010018@hyderabad.bits-pilani.ac.in}
+
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{2.54cm}
+\setlength\oddsidemargin{3.175cm}
+\setlength\textheight{22.86cm}
+\setlength\textwidth{15.240001cm}
+\setlength\footskip{0.0cm}
+\setlength\headheight{0cm}
+\setlength\headsep{0cm}
+% Footnote rule
+\setlength{\skip\footins}{0.119cm}
+\renewcommand\footnoterule{\vspace*{-0.018cm}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.018cm}}\vspace*{0.101cm}}
+% Pages styles
+\makeatletter
+\newcommand\ps@Standard{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{}
+  \renewcommand\thepage{\arabic{page}}
+}
+\makeatother
+\pagestyle{Standard}
 
 \begin{document}
+\clearpage\setcounter{page}{1}\pagestyle{Standard}
+%opening
+{\centering \selectlanguage{english}\bfseries
+A
+\par}
 
-\maketitle
+{\centering\selectlanguage{english}\bfseries
+REPORT
+\par}
 
-\begin{abstract}
-We provide a description of the research  and development process of \textbf{LeChal}, an navigational shoe for the visually impaired. The report discusses the various subsystems concentrating the obstacle avoidance system. We provide an in depth look at the theory and implementation of the Sonar and 3D vision based navigation system along with a brief overall view of the complete system. We also give examples of the various use cases and a few trial examples. The prototype uses stereo correspondence using BRIEF\cite{brief} descriptors and BruteForce matching using the L2 norm in order to calculate the disparity map in order to provide the depth values. We then use a homography based algorithm to calculate the height of an obstacle\cite{obstacleavoidance}. The prototype supplements this data with a Sonar reading to detect an obstacle and provide feedback using a vibrational motor. The prototype gives very accurate results in the controlled environments tested so far. Further testing is to be done in conjunction with the LV Prasad Eye Institute, Hyderabad to get clinical certification.     
-\end{abstract}
+{\centering\selectlanguage{english}\bfseries
+ON
+\par}
+
+
+\bigskip
+{\centering\selectlanguage{english}\bfseries
+ASSISTIVE TECHNOLOGIES FOR THE VISUALLY IMPAIRED
+\par}
+
+\bigskip
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+By
+\par}
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+Ameya Joshi\ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \ \ \ 2010A3PS005G
+\par}
+{\centering\selectlanguage{english}\bfseries
+G.A.Pavan Kumar \ \ \ \ \ \ \ \ \ \ 2010AAPS018H
+\par}
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+\ \ At
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+Ducere Technologies, Hyderabad
+\par}
+
+{\centering 
+\includegraphics[width=4.575cm,height=2.124cm]{logo.png}
+\par}
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+A Practice School --II Station of
+\par}
+
+
+\bigskip
+
+{\centering 
+\includegraphics[width=3.175cm,height=3.124cm]{formatreport-img1.jpg}
+\par}
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+BIRLA INSTITUTE OF TECHNOLOGY AND SCIENCE, PILANI
+(Rajasthan)
+\par}
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+November, 2013
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+\newpage
+{\centering\selectlanguage{english}\bfseries
+A
+\par}
+
+{\centering\selectlanguage{english}\bfseries
+REPORT
+\par}
+
+{\centering\selectlanguage{english}\bfseries
+ON
+\par}
+
+{\centering\selectlanguage{english}\bfseries
+ASSISTIVE TECHNOLOGIES FOR THE VISUALLY IMPAIRED
+\par}
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+By
+\par}
+
+
+\bigskip
+
+{\selectlanguage{english}\bfseries
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ameya Joshi \ \ \ \ \ \ 2010A3PS005G
+\ \ \ \ \ \ Electrical And Electronics\ \  }
+
+{\selectlanguage{english}\bfseries
+\ \ \ \ \ \ \ \ \ \ \  G.A.Pavan Kumar \ \ \ \ \ \ \ \ \ 2010AAPS018G
+\ \ \ \ \ \ Electronics And Communications\ \  }
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+Prepared in partial fulfillment of the
+\par}
+
+{\centering\selectlanguage{english}\bfseries
+Practice School-II Course No.
+\par}
+
+{\centering\selectlanguage{english}\bfseries
+BITS C412/BITS G639
+\par}
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+At
+\par}
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+Ducere Technologies, Hyderabad
+\par}
+
+{\centering 
+\includegraphics[width=4.575cm,height=2.124cm]{logo.png}
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+A Practice School --II Station of
+\par}
+
+
+\bigskip
+
+{\centering 
+\includegraphics[width=3.175cm,height=3.124cm]{formatreport-img2.jpg}
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+BIRLA INSTITUTE OF TECHNOLOGY AND SCIENCE, \ \ \ \ \ \ PILANI
+(Rajasthan)
+\par}
+
+{\centering\selectlanguage{english}\bfseries
+Month year
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+BIRLA INSTITUTE OF TECHNOLOGY \& SCIENCE,
+\par}
+
+{\centering\selectlanguage{english}\bfseries
+PILANI-(Rajasthan)
+\par}
+
+\newpage
+\bigskip
+
+{\centering\selectlanguage{english}\bfseries
+Practice School Division
+\par}
+
+
+\bigskip
+
+
+\bigskip
+
+{\selectlanguage{english}\bfseries
+Station: Ducere Technologies Pvt. Ltd. }
+
+{\selectlanguage{english}
+\textbf{Centre: Hyderabad
+\ \ \ \ \ }\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textbf{Duration: 6 Months
+}\ }
+
+{\selectlanguage{english}
+\textbf{Date of Start}\textbf{:4th July, 2013} \ \ \ \ \textbf{Date of Report
+Submission:26th Nov, 2013}}
+
+
+\bigskip
+
+
+\bigskip
+
+{\selectlanguage{english}
+\textbf{Title of the Project: Assistive Technologies for the Visually Impaired
+}{\textquotedblleft}\textbf{\textcolor{black}{
+}}\textcolor{black}{{\textquotedblright}}}
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+{\selectlanguage{english}\bfseries
+\ \ \ \ \ Name\ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ID No\ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \  
+\ \ \ \ Discipline of Student}
+
+{\selectlanguage{english}\bfseries
+\ \ \ \ \ Ameya Joshi\ \ \ \ \ \   \ \ \ \ \ \ \ \ 2010A3PS005G\ \ \ \ \ \ 
+\ \ \ \ Electronics and Electrical}
+
+{\selectlanguage{english}\bfseries
+\ \ \ \ \ G.A.Pavan Kumar\ \ \ \ \ \ \ 2010AAPS018H\ \ \ \ \ \ 
+\ \ E.C.E}
+
+\bigskip
+
+{\selectlanguage{english}\bfseries
+\ \ \ \ \ \ Name \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Designation of the Expert}\newline
+{\selectlanguage{english}\bfseries
+\ \ \ \ \ \ Krispian Lawrence \ \ \ \ \ \ \ \ \ \ \ \ C.E.O.}
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+{\selectlanguage{english}
+\textbf{Name of the PS Faculty: Dr. S. Sindhu }
+
+
+\bigskip
+
+{\selectlanguage{english}
+\textbf{Key words: StereoVision, OpenCV, Android, Obstacle Detection, Navigation, SONAR }\ }
+
+{\selectlanguage{english}
+\textbf{Project Areas:Computer Vision, Image Processing, Stereo Vision }\ }
+
+{\selectlanguage{english}\bfseries
+Abstract: }{\selectlanguage{english}We provide a description of the research  and development process of \textbf{LeChal}, an navigational shoe for the visually impaired. The report discusses the various subsystems concentrating the obstacle avoidance system. We provide an in depth look at the theory and implementation of the Sonar and 3D vision based navigation system along with a brief overall view of the complete system. We also give examples of the various use cases and a few trial examples. The prototype uses stereo correspondence using BRIEF\cite{brief} descriptors and BruteForce matching using the L2 norm in order to calculate the disparity map in order to provide the depth values. We then use a homography based algorithm to calculate the height of an obstacle\cite{obstacleavoidance}. The prototype supplements this data with a Sonar reading to detect an obstacle and provide feedback using a vibrational motor. The prototype gives very accurate results in the controlled environments tested so far. Further testing is to be done in conjunction with the LV Prasad Eye Institute, Hyderabad to get clinical certification.}
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+
+
+
+{\selectlanguage{english}\bfseries
+Signature of Student\ \ \ \ \ \ \ \ \ \ Signature of PS Faculty}
+
+
+\bigskip
+
+
+\bigskip
+
+{\selectlanguage{english}\bfseries
+Date\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Date }
+
+
+\bigskip
+
+
+\bigskip
+
+
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+\clearpage
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
 
 \tableofcontents
 \listoffigures
@@ -195,6 +610,186 @@ Our contribution to the project was to develop the obstacle avoidance system. Th
 \end{itemize}        
 
 In the following sections, we will discuss the above problem statements in greater detail as well as the various methods we use to solve them.
+\section{SONAR for obstacle detection}
+Sonar (Sound Navigation and Ranging) \ is a technique that \ uses sound
+propagation (usually underwater, as in submarine navigation) to
+navigate, communicate with or detect objects on or under the surface of
+the water, such as other vessels. Two types of technology share the
+name {\textquotedblleft}sonar{\textquotedblright}: passive sonar is
+essentially listening for the sound made by vessels; active sonar is
+emitting pulses of sounds and listening for echoes. Sonar may be used
+as a means of acoustic location and \ of measurement \ of the echo
+\ characteristics of {\textquotedblleft}targets{\textquotedblright} in
+the water. Acoustic location in air was used before the introduction of
+radar. Sonar may also be used in air for robot navigation, and SODAR
+(upward looking in{}-air sonar) is used for atmospheric
+investigations.}
+
+
+\bigskip
+
+{\selectlanguage{english}
+The term sonar is also used for the equipment used to generate and
+receive the sound. The acoustic frequencies used in sonar systems vary
+from very low (infrasonic) to extremely high (ultrasonic). The study of
+underwater sound is known as underwater acoustics or hydro acoustics.
+
+\subsubsection{Sonar Sensing}
+{\selectlanguage{english}
+Sonar or \ ultrasonic \ sensing \ uses \ propagation \ of acoustic
+energy \ at \ higher \ frequencies than normal \ hearing \ to \ extract
+\ information \ from \ the \ environment. \ Sonar \ is \ a \ popular
+\ sensor \ in robotics that employs acoustic pulses and their echoes to
+measure range to an object. Since the sound \ speed \ is usually known,
+\ the object \ range is proportional to \ the echo \ travel time. At
+ultrasonic frequencies the sonar energy is concentrated in a beam,
+providing directional information in addition to range.}
+
+
+{\selectlanguage{english}
+Its popularity is due to its inexpensive cost, light weight, low power
+consumption, and low computational effort, compared to other ranging
+sensors. In some applications, such as in underwater and
+low{}-visibility environments, sonar is often the only viable sensing
+modality.}
+
+
+
+{\selectlanguage{english}
+Sonars in robotics have three different, but related, purposes:}
+
+
+
+\begin{enumerate}
+
+
+\item Obstacle avoidance: The first \ detected echo \ is assumed to
+\ measure the range to the closest object. Robots use this information
+to plan paths around obstacles and to prevent collisions.
+
+\item  Sonar \ Mapping: \ Sonar \ mapping: \ A \ collection \ of \ echoes
+\ acquired \ by \ performing \ a rotational scan or from a sonar array,
+are used to construct a map of the environment. Similar to a radar
+display, a range dot is placed at the detected range along the probing
+pulse direction.
+
+\item Object recognition: A sequence of echoes or sonar maps are processed
+to classify echo producing structures composed of one or more physical
+objects. When successful, this information is useful for robot
+registration or landmark navigation
+\end{enumerate}
+
+
+Some of the famous companies which manufacture sonar sensors are
+Parallax and Maxbotix. Maxbotix \ provides \ a range \ of 60 \ sensors
+along \ 12 \ product \ lines \ which \ vary \ based \ on the
+environment, precision, beam width and connection module.
+
+
+\bigskip
+
+{\selectlanguage{english}
+One of the most sought of series is the LV series because of its high
+precision, robustness, programming simplicity and ease in connection.
+Various libraries are available for Arduino and other development
+boards. The only drawback of this series is the resolution (1 inch)
+which cannot be used where high accuracy is required.}
+
+
+\bigskip
+
+ \includegraphics[width=3.969cm,height=3.625cm]{III-img2.png} 
+
+
+{\selectlanguage{english}
+The HR series is the series which gives the highest resolution. They can
+be connected via USB or direct connection and can be used in indoor as
+well as outdoor environment. The Maxsonar sensors give both digital and
+analog reading and can be easily read and converted to distance using
+some basic formulae. The Maxsonar sensors can also be used for people
+detection and height detection. One of the most important advantages of
+Maxbotix sensors is that they can be daisy chained. Daisy chaining is a
+technique to connect one or more devices together and avoid
+interference between them. The Maxsonar Sensors can be daisy chained in
+3 different ways {}-- the free run mode, the commanded loop
+mode(software triggered) and the continuous loop mode(hardware
+triggered).}
+
+
+\bigskip
+
+{\selectlanguage{english}
+The sonars belonging to the LV Series have 7 pins and can give both
+analog and digital output. They can operate at 3.3V and 5V. They also
+have a pin for series chaining.}
+
+
+\bigskip
+
+{\selectlanguage{english}
+(a) Analog Output}
+
+{\selectlanguage{english}
+The analog output from the LV Sonar can be obatined from the AN pin of
+the Sonar. \ The voltage}
+
+{\selectlanguage{english}
+output is from 0 to Vcc/2 . The resolution of the sonar is 512. This
+resolution should be taken care of when taking the sonar readings on a
+microcontroller having a differnet resolution.}
+
+
+\bigskip
+
+{\selectlanguage{english}
+(b) Digital Output}
+
+{\selectlanguage{english}
+The Digital Output can be measured from the PW pin of the Sonar.
+Whenever the Sonar starts ranging, the PW pin pulled HIGH. Whenever a
+target is detected, the PW pin is pulled low. The time for which the PW
+pin is high can be calculated using the pulseIn() function on an
+Arduino and the distance to the obstacle can be calculated.}
+
+
+(c) Daisy Chaining:
+
+{\selectlanguage{english}
+For low noise chaining the BW pin of the sonar has to be pulled high.
+The chaining can be of three types.
+
+
+
+
+ The free run mode, where multiple sonars are ranging continously. This
+method is to be avoided because it can cause interference between
+multiple sound waves and give false results.
+
+ The chain can be controlled by software using a software controlled
+loop. The RX of the first sonar \ is \ connected \ to \ a \ digital
+\ output \ pin \ on \ the \ microcontroller. The TX \ of \ nth \ sonar
+\ is connected to RX of (n+1)th sonar and the RX of first sonar is
+trigered by atleast a 20us long pulse for all sonars to range once. For
+every cycle, the RX has to triggered to take the readings from the
+sonars
+
+The hardware controlled loop is similar to the software controlled loop.
+The only difference is that the TX of the last sonar is connected to
+the RX of the first sonar by a 1K resistor and the RX of the first
+SONAR needs to be triggered only once. The cycle continues till power
+is supplied and readings can be taken continuously.
+
+
+The time from which a SONAR is triggered to the time taken for one
+ranging cycle is 50ms. So the frequency of readings when one sonar is
+used is 1s/50ms = 20 . This frequency reduces with increase in the
+number of sonars. So frequency reduces during daisy chaining.
+
+We are using this sonar because it gives a digital output
+which we  use directly without doing any complicated computations. We
+can know  the distance of the nearest object. By setting optimum
+threshold values we will know if the objects are obstacles or not.
+
 
 \section{Bluetooth transfer of the images}
 
@@ -598,7 +1193,83 @@ JPEG 1600 x 1200 & 	130KB  &  11s\\
 
 We decided to use the low resolution 320 x 240 JPEG images as suiting our purposes. With HC-06 modules and an ArduCAM shield along with a HTC Desire X android smartphone, we are able to achieve an average of 0.45 seconds for transferring two 320 x 240 JPEG images at a time.
 
-      
+We also tested the computer vision system on the android phone for the time required for processing the two images and giving the decision on whether an obstacle is present or not. The testing was done on an HTC Desire X with Android 4.1.1 with dual cores and 768 MB Ram and a Nexus 4 with Android 4.2, quad core processor and 2 GB RAM. The following were the results of testing:
+
+\begin{table}[h]
+\begin{tabular}{|c|c|}
+\hline
+Phone model & Time taken for detection(average of 10 test images\\
+\hline
+HTC Desire X & 800 ms\\
+\hline
+Nexus 4 & 360 ms\\
+\hline
+
+\end{tabular}
+\caption{Times for Stereo Processing}
+\end{table}
+
+Below are a few example images and outputs that we got.
+
+\begin{figure}[h]
+\centering
+\parbox{5cm}{
+\includegraphics[width=5cm]{screen1.png}
+\caption{Screen 1}
+\label{fig:2figsA1}}
+\qquad
+\begin{minipage}{5cm}
+\includegraphics[width=5cm]{screen2.png}
+\caption{Screen 2}
+\label{fig:2figsB1}
+\end{minipage}
+\end{figure}
+Notice that the pen stand on the table has been accurately marked as being the source of the maximum no. of features and is marked as the primary obstacle. 
+  
+The tests we undertook for accuracy initially on comprised of putting an object of 12 cm height on an empty table at varying distances from 30 cm to 180 cm and testing if the system recognised them as so with the SONAR switched off. We found that our system was able to recognise an obstacle greater than 15 cms in height in 90\% of our test cases. It was found that the system was able to find obstacles and relay their height to an accuracy of 85\% of the no. of tests. We list our findings of the initial tests below:
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|}
+\hline
+Distance of obstacle from shoe(cm) & No. of  tests & Successful detections & \% of successful detections\\
+\hline
+30 & 10 & 10 & 100\%\\
+60 & 10 & 9 & 90\% \\
+90 & 10 & 9 & 90\% \\
+120 & 10 & 8 & 80\%\\
+150 & 15 & 11 & 73.33\% \\
+180 & 15 & 12 & 80\% \\
+\hline
+\end{tabular}
+\caption{Results of tests for accuracy of obstacle detection}
+
+\end{table}
+ 
+We hypothesize that we can improve the by a large amount by increasing the height of the cameras and by better calibration. The accuracy can also be improved by using a better mounting platform on the shoe ensuring that the optical axes of the two cameras are on the same plane parallel to the ground.
+
+Upon using the SONAR as well, we found that accuracy increased to 94\% for the last two test cases and 100\% otherwise.
+
+Thus, we have an accurate and fast system for obstacle detection using cameras mounted on the shoe and the android platform.
+
+The limitations of this system are
+
+\begin{itemize}
+\item Inability to recognise negative height artifacts like ditches as obstacles.
+\item Failure in case of low texture environments.
+\item Not suitable for very high speed environments on account of low transfer rates.
+\end{itemize}
+
+In the next section we discuss future plans for the project to solve the above limitations.
+
+\section{Future Work}
+
+The current setup has a lot of hardware with two cameras and a SONAR. It also has quite a few limitations as described above. In order to make the system more effective and accurate, we describe our future work on this project.
+
+In order to reduce the hardware as well as more accurately analyse terrain, we are looking at using structured light instead of stereoscopy. Structured light has been successfully used in many 3D applications, one of the most famous ones being the Microsoft Kinect. It also requires less hardware in terms of needing only a single camera along with a projection system. We plan on using IR cameras and IR wavelengths for projecting a grid on the surface of the road in order to analyse the terrain and provide more information about the same. 
+
+We also plan on creating our own FTP profile for the bluetooth subsystem in order to improve the speed of transfer of images. Along with this, we are looking at various methods for optimizing the current system in terms of proper image capture in time with the steps and making it more energy efficient at the same time.
+
+In conclusion, LeChal is proving to be an effective system for navigation for the visually impaired and will hopefully provide the independence to them that they currently desire. 
 
 \bibliographystyle{ieeetr}
 \bibliography{citation}

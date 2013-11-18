@@ -1,23 +1,24 @@
-\contentsline {chapter}{\numberline {1}Introduction}{4}
-\contentsline {section}{\numberline {1.1}Related Work}{5}
-\contentsline {section}{\numberline {1.2}Overview}{6}
-\contentsline {section}{\numberline {1.3}LeChal-Systems and Integration}{7}
-\contentsline {subsection}{\numberline {1.3.1}High Level Navigation}{7}
-\contentsline {subsection}{\numberline {1.3.2}Low Level Navigation}{8}
-\contentsline {subsection}{\numberline {1.3.3}Obstacle and Terrain Detection}{9}
-\contentsline {subsection}{\numberline {1.3.4}Feedback and Communication}{10}
-\contentsline {section}{\numberline {1.4}Contribution}{10}
-\contentsline {chapter}{\numberline {2}Methodology}{12}
-\contentsline {section}{\numberline {2.1}Bluetooth transfer of the images}{12}
-\contentsline {section}{\numberline {2.2}Bluetooth}{14}
-\contentsline {subsection}{\numberline {2.2.1}Basics of Bluetooth}{15}
-\contentsline {subsection}{\numberline {2.2.2}Image Transfer}{16}
-\contentsline {section}{\numberline {2.3}Stereo Vision for obstacle avoidance}{16}
-\contentsline {subsection}{\numberline {2.3.1}Calibration}{17}
-\contentsline {subsection}{\numberline {2.3.2}Stereo Calibration}{20}
-\contentsline {subsection}{\numberline {2.3.3}Dense Stereo Correspondence}{21}
-\contentsline {subsection}{\numberline {2.3.4}Approximation of the height of the detected obstacle}{22}
-\contentsline {section}{\numberline {2.4}Implementation in OpenCV4Android}{23}
-\contentsline {subsection}{\numberline {2.4.1}Application Development with Async Initialization}{23}
-\contentsline {subsection}{\numberline {2.4.2}StereoVision in Android}{24}
-\contentsline {chapter}{\numberline {3}Conclusions}{26}
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Related Work}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Overview}{6}{section.1.2}
+\contentsline {section}{\numberline {1.3}LeChal-Systems and Integration}{7}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}High Level Navigation}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Low Level Navigation}{8}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Obstacle and Terrain Detection}{9}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Feedback and Communication}{10}{subsection.1.3.4}
+\contentsline {section}{\numberline {1.4}Contribution}{10}{section.1.4}
+\contentsline {chapter}{\numberline {2}Methodology}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Bluetooth transfer of the images}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Bluetooth}{14}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Basics of Bluetooth}{15}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Image Transfer}{16}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Stereo Vision for obstacle avoidance}{16}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Calibration}{17}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Stereo Calibration}{20}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Dense Stereo Correspondence}{21}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Approximation of the height of the detected obstacle}{22}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Implementation in OpenCV4Android}{23}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Application Development with Async Initialization}{23}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}StereoVision in Android}{24}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Conclusions}{26}{chapter.3}
